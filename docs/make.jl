@@ -20,6 +20,8 @@ Literate.notebook(
     credit = false, execute = false,
 )
 
+using DocumenterCodeBlocks
+
 pages =  [
     "Introduction" => "index.md",
     "Overarching tutorial" => "tutorial.md",
@@ -48,4 +50,5 @@ build_docs_with_style(pages, DynamicalSystems,
     # the whole `DynamicalSystem` API...
     # warnonly = [:doctest, :missing_docs, :cross_references, :linkcheck],
     warnonly = true,
+    plugins = [CodeBlocks()],
 )
